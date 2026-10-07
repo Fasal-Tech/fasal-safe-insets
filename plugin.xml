@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="fasal-safe-insets" version="1.0.0">
+  <name>FasalSafeInsets</name>
+  <description>Keeps the web view clear of system bars and keyboard on Android 16+ (enforced edge-to-edge)</description>
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="SafeInsets">
+        <param name="android-package" value="com.fasal.safeinsets.SafeInsets" />
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+    <source-file src="src/android/SafeInsets.java" target-dir="src/com/fasal/safeinsets" />
+  </platform>
+</plugin>
